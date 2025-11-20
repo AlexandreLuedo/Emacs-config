@@ -76,7 +76,7 @@
   :config
   (setq org-startup-with-latex-preview t))
 
-(setq fancy-splash-image (expand-file-name "/Users/hadrienklotz/org/RunesRougesEmacs.png" doom-user-dir))
+(setq fancy-splash-image (expand-file-name "~/org/RunesRougesEmacs.png" doom-user-dir))
 
 (setq org-hide-emphasis-markers t)
 (custom-set-faces
