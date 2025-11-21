@@ -194,3 +194,5 @@
 ;; For installing pdf-tools
 (setenv "PKG_CONFIG_PATH"
         (concat "/opt/homebrew/lib/pkgconfig:" (getenv "PKG_CONFIG_PATH")))
+;; Used for macos
+(add-to-list 'initial-frame-alist '(fullscreen . maximized))
