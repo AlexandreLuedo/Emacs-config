@@ -4,10 +4,14 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(org-safe-remote-resources
-   '("\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-bigblow\\.setup\\'"
+   '("\\`https://github\\.com\\(?:/\\|\\'\\)"
+     "\\`https://github\\.com/fniessen/org-html-themes/blob/master/org/theme-bigblow-local\\.setup\\'"
+     "\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-bigblow\\.setup\\'"
      "\\`https://fniessen\\.github\\.io/org-html-themes/org/theme-readtheorg\\.setup\\'"))
  '(package-selected-packages
-   '(cssh org-download org-xlatex pdf-tools preview-dvisvgm ssh ssh-config-mode)))
+   '(cssh multiple-cursors org-download org-xlatex pdf-tools preview-dvisvgm ssh
+     ssh-config-mode))
+ '(send-mail-function 'sendmail-send-it))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
