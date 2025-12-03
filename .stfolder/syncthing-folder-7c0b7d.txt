@@ -1,5 +1,0 @@
-# This directory is a Syncthing folder marker.
-# Do not delete.
-
-folderID: 49knd-musfj
-created: 2025-11-13T00:04:12+01:00
