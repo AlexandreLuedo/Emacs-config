@@ -196,3 +196,5 @@
         (concat "/opt/homebrew/lib/pkgconfig:" (getenv "PKG_CONFIG_PATH")))
 ;; Used for macos
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
+;; Set to nil so Org uses the #+ATTR_ORG width
+(setq org-image-actual-width nil)
