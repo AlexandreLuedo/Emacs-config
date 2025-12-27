@@ -79,14 +79,14 @@
 (setq fancy-splash-image (expand-file-name "~/org/RunesRougesEmacs.png" doom-user-dir))
 
 (setq org-hide-emphasis-markers t)
-(custom-set-faces
- '(org-level-1 ((t (:weight bold :height 1.4))))
- '(org-level-2 ((t (:weight bold :height 1.15))))
- '(org-level-3 ((t (:weight bold :height 1.1))))
-)
-(set-face-attribute 'org-level-1 nil :height 1.4)
-(set-face-attribute 'org-level-2 nil :height 1.15)
-(set-face-attribute 'org-level-3 nil :height 1.1)
+;; (custom-set-faces
+;;  '(org-level-1 ((t (:weight bold :height 1.4))))
+;;  '(org-level-2 ((t (:weight bold :height 1.15))))
+;;  '(org-level-3 ((t (:weight bold :height 1.1))))
+;; )
+;; (set-face-attribute 'org-level-1 nil :height 1.4)
+;; (set-face-attribute 'org-level-2 nil :height 1.15)
+;; (set-face-attribute 'org-level-3 nil :height 1.1)
 (setq display-time-interval 59)
 
 (after! treemacs
@@ -129,3 +129,23 @@
 
 ;; Disable exiting confirmation
 (setq confirm-kill-emacs nil)
+
+
+;; Mail config
+(setq mu4e-update-interval 600) ; Vérifie les mails toutes les 10 min
+(setq sendmail-program (executable-find "msmtp"))
+(setq send-mail-function #'smtpmail-send-it)
+(setq message-send-mail-function #'message-send-mail-with-sendmail)
+(setq message-sendmail-f-is-evil t)
+(setq message-sendmail-extra-arguments '("--read-envelope-from"))
+(setq message-sendmail-envelope-from 'header)
+
+;; Configuration du compte Proton
+(set-email-account! "Proton"
+  '((mu4e-sent-folder       . "/proton/Sent")
+    (mu4e-drafts-folder     . "/proton/Drafts")
+    (mu4e-trash-folder      . "/proton/Trash")
+    (mu4e-refile-folder     . "/proton/Archive")
+    (user-mail-address      . "myname@pm.me")
+    (user-full-name         . "myname"))
+  t) ; 't' signifie que c'est le compte par défaut
