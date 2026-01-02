@@ -132,21 +132,3 @@
 
 
 ;; Mail config
-(setq mu4e-update-interval 600) ; Vérifie les mails toutes les 10 min
-(setq sendmail-program (executable-find "msmtp"))
-(setq send-mail-function #'smtpmail-send-it)
-(setq message-send-mail-function #'message-send-mail-with-sendmail)
-(setq message-sendmail-f-is-evil t)
-(setq message-sendmail-extra-arguments '("--read-envelope-from"))
-(setq message-sendmail-envelope-from 'header)
-
-;; Configuration du compte Proton
-(set-email-account! "Proton"
-  '((mu4e-sent-folder       . "/proton/Sent")
-    (mu4e-drafts-folder     . "/proton/Drafts")
-    (mu4e-trash-folder      . "/proton/Trash")
-    (mu4e-refile-folder     . "/proton/Archive")
-    (user-mail-address      . "hadrienklotz@pm.me")
-    (user-full-name         . "Hadrien KLOTZ")
-    (message-send-mail-function . message-send-mail-with-sendmail))
-  t) ; 't' signifie que c'est le compte par défaut
