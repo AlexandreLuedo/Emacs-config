@@ -146,6 +146,7 @@
     (mu4e-drafts-folder     . "/proton/Drafts")
     (mu4e-trash-folder      . "/proton/Trash")
     (mu4e-refile-folder     . "/proton/Archive")
-    (user-mail-address      . "myname@pm.me")
-    (user-full-name         . "myname"))
+    (user-mail-address      . "hadrienklotz@pm.me")
+    (user-full-name         . "Hadrien KLOTZ")
+    (message-send-mail-function . message-send-mail-with-sendmail))
   t) ; 't' signifie que c'est le compte par défaut
