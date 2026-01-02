@@ -15,7 +15,7 @@
  '(send-mail-function 'sendmail-send-it)
  '(smtpmail-smtp-server "127.0.0.1")
  '(smtpmail-smtp-service 1025))
-(custom-set-faces
+;; (custom-set-faces                       
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
